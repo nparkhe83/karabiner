@@ -63,13 +63,13 @@ export function createHyperSubLayer(
             (subLayerVariable) => subLayerVariable !== subLayerVariableName
           )
           .map((subLayerVariable) => ({
-            type: "variable_if" as const,
             name: subLayerVariable,
+            type: "variable_if" as const,
             value: 0,
           })),
         {
-          type: "variable_if",
           name: "hyper",
+          type: "variable_if",
           value: 1,
         },
       ],

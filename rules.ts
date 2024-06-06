@@ -340,10 +340,10 @@ fs.writeFileSync(
       },
       profiles: [
         {
-          name: "Default",
           complex_modifications: {
             rules,
           },
+          name: "Default",
         },
       ],
     },

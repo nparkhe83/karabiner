@@ -1,6 +1,8 @@
 import fs from "fs";
 import { KarabinerRules } from "./types";
 import { createHyperSubLayers, app, open, rectangle, shell } from "./utils";
+import sortJSON from "sort-json";
+import { doubleShiftCaps } from "./rules/double_shift_caps";
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
@@ -55,48 +57,61 @@ const rules: KarabinerRules[] = [
       //      },
     ],
   },
+  // Press Right Shift twice to get Caps Lock
+  doubleShiftCaps,
+
   ...createHyperSubLayers({
-    spacebar: open(
-      "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
-    ),
+    // spacebar: open(
+    //   "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
+    // ),
     // b = "B"rowse
+    // TODO: Add primevideo, jiocinema,
     b: {
-      t: open("https://twitter.com"),
-      // Quarterly "P"lan
-      p: open("https://qrtr.ly/plan"),
-      y: open("https://news.ycombinator.com"),
-      f: open("https://facebook.com"),
-      r: open("https://reddit.com"),
+      c: open(
+        "https://perplexity.ai/",
+        "https://chat.openai.com",
+        "https://gemini.google.com/app"
+      ),
+      e: open("https://espncricinfo.com"),
+      g: open("https://github.com/preciso-in"),
+      i: open("https://irctc.co.in"),
+      m: open("https://mail.google.com"),
+      n: open("https://news.ycombinator.com", "https://news.google.co.in"),
+      p: open("https://perplexity.ai/"),
+      r: open("https://regex101.com"),
+      s: open(
+        "https://amazon.in",
+        "https://flipkart.com",
+        "https://jiomart.com"
+      ),
+      t: open("https://trello.com"),
+      u: open("https://udemy.com"),
+      y: open("https://youtube.com"),
     },
     // o = "Open" applications
+    // Todo: Add opera, arc, whatsapp,
     o: {
-      1: app("1Password"),
-      g: app("Google Chrome"),
-      c: app("Notion Calendar"),
-      v: app("Visual Studio Code"),
-      d: app("Discord"),
-      s: app("Slack"),
-      e: app("Superhuman"),
-      n: app("Notion"),
-      t: app("Terminal"),
-      // Open todo list managed via *H*ypersonic
-      h: open(
-        "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
-      ),
-      z: app("zoom.us"),
-      // "M"arkdown (Obsidian.md)
-      m: app("Obsidian"),
+      a: app("anki"),
+      b: app("Books"),
+      c: app("Visual Studio Code"),
+      // "D"iary (Obsidian.md)
+      d: app("Obsidian"),
       f: app("Finder"),
-      r: app("Texts"),
-      // "i"Message
-      i: app("Texts"),
-      p: app("Spotify"),
-      a: app("iA Presenter"),
-      // "W"hatsApp has been replaced by Texts
-      w: open("Texts"),
-      l: open(
-        "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
-      ),
+      g: app("Google Chrome"),
+      i: app("iterm"),
+      m: app("Music"),
+      p: app("Photos"),
+      r: app("Microsoft Remote Desktop"),
+      s: app("Microsoft Onenote"),
+      w: app("WhatsApp"),
+
+      // Open todo list managed via *H*ypersonic
+      // h: open(
+      //   "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
+      // ),
+      // l: open(
+      //   "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
+      // ),
     },
 
     // TODO: This doesn't quite work yet.
@@ -327,9 +342,8 @@ const rules: KarabinerRules[] = [
   }),
 ];
 
-fs.writeFileSync(
-  "karabiner.json",
-  JSON.stringify(
+const output = JSON.stringify(
+  sortJSON(
     {
       global: {
         ask_for_confirmation_before_quitting: true,
@@ -343,6 +357,12 @@ fs.writeFileSync(
           complex_modifications: {
             rules,
           },
+          name: "Nilesh",
+        },
+        {
+          // Profile without any Karabiner rules
+          // For users who do not want to use Karabiner.
+          complex_modifications: {},
           name: "Default",
         },
       ],
@@ -351,3 +371,5 @@ fs.writeFileSync(
     2
   )
 );
+
+fs.writeFileSync("karabiner.json", output);

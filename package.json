@@ -12,6 +12,9 @@
   },
   "scripts": {
     "build": "tsm rules.ts",
-    "watch": "nodemon --exec yarn build -e ts"
+    "watch": "nodemon --ignore '*.json' --exec yarn build -e ts"
+  },
+  "dependencies": {
+    "sort-json": "^2.0.1"
   }
 }

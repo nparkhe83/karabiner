@@ -63,13 +63,13 @@ export function createHyperSubLayer(
             (subLayerVariable) => subLayerVariable !== subLayerVariableName
           )
           .map((subLayerVariable) => ({
-            name: subLayerVariable,
             type: "variable_if" as const,
+            name: subLayerVariable,
             value: 0,
           })),
         {
-          name: "hyper",
           type: "variable_if",
+          name: "hyper",
           value: 1,
         },
       ],
@@ -78,13 +78,6 @@ export function createHyperSubLayer(
     ...(Object.keys(commands) as (keyof typeof commands)[]).map(
       (command_key): Manipulator => ({
         ...commands[command_key],
-        type: "basic" as const,
-        from: {
-          key_code: command_key,
-          modifiers: {
-            optional: ["any"],
-          },
-        },
         // Only trigger this command if the variable is 1 (i.e., if Hyper + sublayer is held)
         conditions: [
           {
@@ -93,6 +86,13 @@ export function createHyperSubLayer(
             value: 1,
           },
         ],
+        from: {
+          key_code: command_key,
+          modifiers: {
+            optional: ["any"],
+          },
+        },
+        type: "basic" as const,
       })
     ),
   ];
@@ -159,9 +159,11 @@ function generateSubLayerVariableName(key: KeyCode) {
  */
 export function open(...what: string[]): LayerCommand {
   return {
-    to: what.map((w) => ({
-      shell_command: `open ${w}`,
-    })),
+    to: [
+      {
+        shell_command: `open ${what.join(" ")}`,
+      },
+    ],
     description: `Open ${what.join(" & ")}`,
   };
 }

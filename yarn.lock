@@ -285,6 +285,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"detect-indent@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "detect-indent@npm:5.0.0"
+  checksum: 10c0/58d985dd5b4d5e5aad6fe7d8ecc74538fa92c807c894794b8505569e45651bf01a38755b65d9d3d17e512239a26d3131837cbef43cf4226968d5abf175bbcc9d
+  languageName: node
+  linkType: hard
+
+"detect-newline@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "detect-newline@npm:2.1.0"
+  checksum: 10c0/cb75c36c59da87115f49fe4aa22507f6c5271bac94c63a056af5d9dea2919208de57b6f0fb4543d6cf635965d10b42729d443589caa302cc76e1fa9f48e55f05
+  languageName: node
+  linkType: hard
+
 "eastasianwidth@npm:^0.2.0":
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
@@ -798,6 +812,7 @@ __metadata:
     "@types/node": "npm:^18.7.19"
     nodemon: "npm:^2.0.20"
     prettier: "npm:^2.7.1"
+    sort-json: "npm:^2.0.1"
     tsm: "npm:^2.2.2"
   languageName: unknown
   linkType: soft
@@ -844,6 +859,13 @@ __metadata:
   dependencies:
     brace-expansion: "npm:^2.0.1"
   checksum: 10c0/2c16f21f50e64922864e560ff97c587d15fd491f65d92a677a344e970fe62aafdbeafe648965fa96d33c061b4d0eabfe0213466203dd793367e7f28658cf6414
+  languageName: node
+  linkType: hard
+
+"minimist@npm:^1.2.0":
+  version: 1.2.8
+  resolution: "minimist@npm:1.2.8"
+  checksum: 10c0/19d3fcdca050087b84c2029841a093691a91259a47def2f18222f41e7645a0b7c44ef4b40e88a1e58a40c84d2ef0ee6047c55594d298146d0eb3f6b737c20ce6
   languageName: node
   linkType: hard
 
@@ -1210,6 +1232,19 @@ __metadata:
     ip-address: "npm:^9.0.5"
     smart-buffer: "npm:^4.2.0"
   checksum: 10c0/d54a52bf9325165770b674a67241143a3d8b4e4c8884560c4e0e078aace2a728dffc7f70150660f51b85797c4e1a3b82f9b7aa25e0a0ceae1a243365da5c51a7
+  languageName: node
+  linkType: hard
+
+"sort-json@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "sort-json@npm:2.0.1"
+  dependencies:
+    detect-indent: "npm:^5.0.0"
+    detect-newline: "npm:^2.1.0"
+    minimist: "npm:^1.2.0"
+  bin:
+    sort-json: app/cmd.js
+  checksum: 10c0/a9db6c13c715f6eb3bafb1acc3891909220f099e3bc32ae06328c67c0e0c2f1f05307df72551f69bc5644b6d16423e6934e1e536e96f4e167789723c20c5461b
   languageName: node
   linkType: hard
 

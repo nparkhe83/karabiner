@@ -8,9 +8,9 @@ export interface LayerCommand {
   description?: string;
 }
 
-type HyperKeySublayer = {
+export type HyperKeySublayer = {
   // The ? is necessary, otherwise we'd have to define something for _every_ key code
-  [key_code in KeyCode]?: LayerCommand;
+  [key_code in KeyCode]?: LayerCommand | Window | null;
 };
 
 /**

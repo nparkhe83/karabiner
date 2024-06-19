@@ -1,4 +1,4 @@
-import { KarabinerRules } from "./../types";
+import { KarabinerRules } from "../types";
 
 const doubleShiftCaps: KarabinerRules = {
   description: "Change double tap right ⇧ key to caps lock",

@@ -1,11 +1,12 @@
-import { app } from "./utils";
+import { app } from "../utils";
 
 // Todo: Add opera, arc, whatsapp,
 
 // o = "Open" applications
 const app_rules = {
   a: app("anki"),
-  // b: Does not work on MXKeys,
+  // b: Does not work on MXKeys but works on Mac,
+  // c: Does not work on Dell but works on Mac,
   c: app("Visual Studio Code"),
   // "D"iary (Obsidian.md)
   d: app("Obsidian"),

@@ -1,11 +1,12 @@
 import fs from "fs";
-import { KarabinerRules } from "./types";
-import { createHyperSubLayers, app, open, rectangle, shell } from "./utils";
 import sortJSON from "sort-json";
-import { doubleShiftCaps } from "./rules/double_shift_caps";
-import { app_rules } from "./app_rules";
-import { web_rules } from "./web_rules";
 import { devices } from "./device-configuration";
+import { app_rules } from "./rules/app_rules";
+import { doubleShiftCaps } from "./rules/double_shift_caps";
+import { movement_rules } from "./rules/movement_rules";
+import { web_rules } from "./rules/web_rules";
+import { KarabinerRules } from "./types";
+import { createHyperSubLayers } from "./utils";
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
@@ -70,7 +71,7 @@ const rules: KarabinerRules[] = [
     // TODO: Test this out
     // v = mo"V"e which isn't "m" because we want it to be on the left hand
     // so that hjkl work like they do in vim
-    // v: movement_rules,
+    v: movement_rules,
 
     // TODO: Test this out
     // c = Musi"c" which isn't "m" because we want it to be on the left hand
@@ -81,6 +82,14 @@ const rules: KarabinerRules[] = [
     // r: raycast_rules,
   }),
 ];
+
+const parameters = {
+  "basic.simultaneous_threshold_milliseconds": 50,
+  "basic.to_delayed_action_delay_milliseconds": 500,
+  "basic.to_if_alone_timeout_milliseconds": 1000,
+  "basic.to_if_held_down_threshold_milliseconds": 500,
+  "mouse_motion_to_scroll.speed": 100,
+};
 
 const karabinerConfig = {
   global: {
@@ -93,6 +102,7 @@ const karabinerConfig = {
   profiles: [
     {
       complex_modifications: {
+        parameters,
         rules,
       },
       name: "Nilesh",
@@ -101,7 +111,9 @@ const karabinerConfig = {
     {
       // Profile without any Karabiner rules
       // For users who do not want to use Karabiner.
-      complex_modifications: {},
+      complex_modifications: {
+        parameters,
+      },
       name: "Default",
     },
   ],

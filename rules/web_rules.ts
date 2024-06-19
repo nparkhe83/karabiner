@@ -1,4 +1,4 @@
-import { open } from "./utils";
+import { open } from "../utils";
 
 // "w" = "W"eb
 // "b" Does not work with Mx Keys. Works with Other keyboards.

@@ -3,12 +3,15 @@ import sortJSON from "sort-json";
 import { devices } from "./device-configuration";
 import { app_rules } from "./rules/app_rules";
 import { doubleShiftCaps } from "./rules/double_shift_caps";
+import { mouseExtraButtons } from "./rules/mouse_extra_buttons";
 import { movement_rules } from "./rules/movement_rules";
 import { web_rules } from "./rules/web_rules";
 import { KarabinerRules } from "./types";
 import { createHyperSubLayers } from "./utils";
 
 const rules: KarabinerRules[] = [
+  // Maps button 5 to left desktop switch, 4 to right desktop switch
+  mouseExtraButtons,
   // Define the Hyper key itself
   {
     description: "Hyper Key (⌃⌥⇧⌘)",

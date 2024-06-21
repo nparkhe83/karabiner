@@ -1,3 +1,5 @@
 node_modules
 *backups
 *.gz
+
+**/.DS_Store

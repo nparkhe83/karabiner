@@ -104,6 +104,7 @@ export interface From {
   simultaneous?: SimultaneousFrom[];
   simultaneous_options?: SimultaneousOptions;
   modifiers?: Modifiers;
+  pointing_button?: string;
 }
 
 export interface Modifiers {

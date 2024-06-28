@@ -1100,7 +1100,19 @@
                     "mouse_motion_to_scroll.speed": 100
                 }
             },
-            "name": "Default"
+            "devices": [],
+            "name": "Default",
+            "parameters": {
+                "delay_milliseconds_before_open_device": 1000
+            },
+            "rules": [],
+            "selected": false,
+            "simple_modifications": [],
+            "virtual_hid_keyboard": {
+                "country_code": 0,
+                "indicate_sticky_modifier_keys_state": true,
+                "mouse_key_xy_scale": 100
+            }
         }
     ]
 }

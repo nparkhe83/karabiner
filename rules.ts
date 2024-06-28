@@ -117,7 +117,19 @@ const karabinerConfig = {
       complex_modifications: {
         parameters,
       },
+      devices: [],
+      rules: [],
       name: "Default",
+      parameters: {
+        delay_milliseconds_before_open_device: 1000,
+      },
+      selected: false,
+      simple_modifications: [],
+      virtual_hid_keyboard: {
+        country_code: 0,
+        indicate_sticky_modifier_keys_state: true,
+        mouse_key_xy_scale: 100,
+      },
     },
   ],
 };

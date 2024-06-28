@@ -3,6 +3,7 @@ import { open } from "../utils";
 // "w" = "W"eb
 // "b" Does not work with Mx Keys. Works with Other keyboards.
 const web_rules = {
+  a: open("https://www.cheatography.com"),
   c: open(
     "https://perplexity.ai/",
     "https://chat.openai.com",

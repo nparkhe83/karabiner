@@ -212,7 +212,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open https://www.cheatography.com",
+                                "description": "Open https://cheatography.com/preview/fafdf7cc9aed740cc15beba6afafdfee/ & https://cheatography.com/preview/baf0c5d99ae9f463ded491ffed262064/",
                                 "from": {
                                     "key_code": "a",
                                     "modifiers": {
@@ -223,7 +223,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open https://www.cheatography.com"
+                                        "shell_command": "open https://cheatography.com/preview/fafdf7cc9aed740cc15beba6afafdfee/ https://cheatography.com/preview/baf0c5d99ae9f463ded491ffed262064/"
                                     }
                                 ],
                                 "type": "basic"

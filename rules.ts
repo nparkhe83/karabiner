@@ -8,10 +8,13 @@ import { movement_rules } from "./rules/movement_rules";
 import { web_rules } from "./rules/web_rules";
 import { KarabinerRules } from "./types";
 import { createHyperSubLayers } from "./utils";
+import { missionControlKeys } from "./rules/mission_control";
 
 const rules: KarabinerRules[] = [
   // Maps button 5 to left desktop switch, 4 to right desktop switch
   mouseExtraButtons,
+  // Map alt + u to mission control
+  missionControlKeys,
   // Define the Hyper key itself
   {
     description: "Hyper Key (⌃⌥⇧⌘)",

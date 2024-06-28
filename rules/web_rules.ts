@@ -24,7 +24,10 @@ const web_rules = {
   ),
   r: open("https://regex101.com"),
   s: open("https://amazon.in", "https://flipkart.com", "https://jiomart.com"),
-  t: open("https://trello.com"),
+  t: open(
+    "https://trello.com/b/ZKXjWW5f/variety-mart",
+    "https://trello.com/b/SRfcnNWr/tasks"
+  ),
   u: open("https://udemy.com"),
   y: open("https://youtube.com"),
 };

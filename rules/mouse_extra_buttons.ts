@@ -1,6 +1,6 @@
 import { KarabinerRules } from "../types";
 
-const mouseExtraButtons: KarabinerRules = {
+export const mouseExtraButtons: KarabinerRules = {
   description:
     "Maps button 5 to left desktop switch, 4 to right desktop switch",
   manipulators: [
@@ -30,5 +30,3 @@ const mouseExtraButtons: KarabinerRules = {
     },
   ],
 };
-
-export { mouseExtraButtons };

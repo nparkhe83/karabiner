@@ -3,7 +3,7 @@ import { app } from "../utils";
 // Todo: Add opera, arc, whatsapp,
 
 // o = "Open" applications
-const app_rules = {
+export const app_rules = {
   a: app("anki"),
   // b: Does not work on MXKeys but works on Mac,
   // c: Does not work on Dell but works on Mac,
@@ -28,5 +28,3 @@ const app_rules = {
   //   "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
   // ),
 };
-
-export { app_rules };

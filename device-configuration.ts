@@ -1,4 +1,4 @@
-const devices = [
+export const devices = [
   {
     disable_built_in_keyboard_if_exists: false,
     fn_function_keys: [],
@@ -165,5 +165,3 @@ const devices = [
     treat_as_built_in_keyboard: false,
   },
 ];
-
-export { devices };

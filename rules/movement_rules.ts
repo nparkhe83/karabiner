@@ -2,7 +2,7 @@ import { HyperKeySublayer } from "../utils";
 
 // v = "moVe" which isn't "m" because we want it to be on the left hand
 // so that hjkl work like they do in vim
-const movement_rules: HyperKeySublayer = {
+export const movement_rules: HyperKeySublayer = {
   h: {
     to: [{ key_code: "left_arrow" }],
   },
@@ -34,5 +34,3 @@ const movement_rules: HyperKeySublayer = {
     to: [{ key_code: "page_up" }],
   }, */
 };
-
-export { movement_rules };

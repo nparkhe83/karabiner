@@ -1,6 +1,6 @@
 import { KarabinerRules } from "../types";
 
-const missionControlKeys: KarabinerRules = {
+export const missionControlKeys: KarabinerRules = {
   description: "Map alt + u to mission control",
   manipulators: [
     {
@@ -20,5 +20,3 @@ const missionControlKeys: KarabinerRules = {
     },
   ],
 };
-
-export { missionControlKeys };

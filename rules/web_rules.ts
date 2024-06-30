@@ -2,7 +2,7 @@ import { open } from "../utils";
 
 // "w" = "W"eb
 // "b" Does not work with Mx Keys. Works with Other keyboards.
-const web_rules = {
+export const web_rules = {
   a: open(
     "https://cheatography.com/preview/fafdf7cc9aed740cc15beba6afafdfee/",
     "https://cheatography.com/preview/baf0c5d99ae9f463ded491ffed262064/"
@@ -31,5 +31,3 @@ const web_rules = {
   u: open("https://udemy.com"),
   y: open("https://youtube.com"),
 };
-
-export { web_rules };

@@ -9,6 +9,8 @@ import { web_rules } from "./rules/web_rules";
 import { KarabinerRules } from "./types";
 import { createHyperSubLayers } from "./utils";
 import { missionControlKeys } from "./rules/mission_control";
+import { fn_function_keys } from "./rules/defaults/fn_key_mappings";
+import { global } from "./rules/defaults/global_config";
 
 const rules: KarabinerRules[] = [
   // Maps button 5 to left desktop switch, 4 to right desktop switch
@@ -98,13 +100,7 @@ const parameters = {
 };
 
 const karabinerConfig = {
-  global: {
-    ask_for_confirmation_before_quitting: true,
-    check_for_updates_on_startup: true,
-    show_in_menu_bar: true,
-    show_profile_name_in_menu_bar: false,
-    unsafe_ui: false,
-  },
+  global,
   profiles: [
     {
       complex_modifications: {
@@ -113,16 +109,19 @@ const karabinerConfig = {
       },
       name: "Nilesh",
       devices,
+      fn_function_keys,
     },
     {
       // Profile without any Karabiner rules
       // For users who do not want to use Karabiner.
       complex_modifications: {
         parameters,
+        rules: [],
       },
       devices: [],
       rules: [],
       name: "Default",
+      fn_function_keys,
       parameters: {
         delay_milliseconds_before_open_device: 1000,
       },

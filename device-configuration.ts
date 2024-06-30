@@ -153,7 +153,7 @@ const devices = [
       product_id: 9492,
       vendor_id: 16700,
     },
-    ignore: true,
+    ignore: false,
     manipulate_caps_lock_led: false,
     mouse_flip_horizontal_wheel: false,
     mouse_flip_vertical_wheel: false,

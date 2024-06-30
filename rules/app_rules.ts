@@ -7,7 +7,6 @@ export const app_rules = {
   a: app("anki"),
   // b: Does not work on MXKeys but works on Mac,
   // c: Does not work on Dell but works on Mac,
-  c: app("Visual Studio Code"),
   // "D"iary (Obsidian.md)
   d: app("Obsidian"),
   f: app("Finder"),
@@ -18,7 +17,9 @@ export const app_rules = {
   m: app("Music"),
   p: app("Photos"),
   r: app("Microsoft Remote Desktop"),
+  // s: Does not work on Dell but works on Mac
   s: app("Microsoft Onenote"),
+  v: app("Visual Studio Code"),
   w: app("WhatsApp"),
   // Open todo list managed via *H*ypersonic
   // h: open(

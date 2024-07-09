@@ -18,7 +18,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Maps button 5 to left desktop switch, 4 to right desktop switch",
+                        "description": "Maps Mouse button 5 to left desktop switch, 4 to right desktop switch",
                         "manipulators": [
                             {
                                 "from": {

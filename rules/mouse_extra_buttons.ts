@@ -2,7 +2,7 @@ import { KarabinerRules } from "../types";
 
 export const mouseExtraButtons: KarabinerRules = {
   description:
-    "Maps button 5 to left desktop switch, 4 to right desktop switch",
+    "Maps Mouse button 5 to left desktop switch, 4 to right desktop switch",
   manipulators: [
     {
       from: {

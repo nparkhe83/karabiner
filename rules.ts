@@ -1,6 +1,7 @@
 import fs from "fs";
 import sortJSON from "sort-json";
 import { devices } from "./device-configuration";
+import { ankiBuryKeyRemap } from "./rules/anki_bury_key_remap";
 import { app_rules } from "./rules/app_rules";
 import { appln_to_Option } from "./rules/appln_rightOption";
 import { fn_function_keys } from "./rules/defaults/fn_key_mappings";
@@ -55,6 +56,8 @@ const rules: KarabinerRules[] = [
       },
     ],
   },
+  // Use 5 in Number row and 5 in Keypad to bury card when Anki is open
+  ankiBuryKeyRemap,
   // Press Right Shift twice to get Caps Lock
   doubleShiftCaps,
 

@@ -18,7 +18,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Maps Mouse button 5 to left desktop switch, 4 to right desktop switch",
+                        "description": "Maps Mouse button 5 to left desktop switch, 4 to right desktop switch, `Shift + Middle Button` to Mission Control",
                         "manipulators": [
                             {
                                 "from": {
@@ -41,6 +41,28 @@
                                 "to": [
                                     {
                                         "key_code": "right_arrow",
+                                        "modifiers": [
+                                            "left_control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift"
+                                        ],
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    },
+                                    "pointing_button": "button3"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow",
                                         "modifiers": [
                                             "left_control"
                                         ]

@@ -25,27 +25,5 @@ export const ankiBuryKeyRemap: KarabinerRules = {
         },
       ],
     },
-    {
-      from: {
-        key_code: "5",
-        modifiers: {
-          mandatory: [],
-          optional: ["any"],
-        },
-      },
-      to: [
-        {
-          key_code: "equal_sign",
-          modifiers: [],
-        },
-      ],
-      type: "basic",
-      conditions: [
-        {
-          type: "frontmost_application_if",
-          bundle_identifiers: ["^net\\.ankiweb\\.dtop"],
-        },
-      ],
-    },
   ],
 };

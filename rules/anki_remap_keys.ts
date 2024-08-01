@@ -28,4 +28,31 @@ export const ankiKeysRemap: [KarabinerRules] = [
       },
     ],
   },
+  {
+    description: "Numpad_5 to `=` i.e bury card when Anki is open",
+    manipulators: [
+      {
+        from: {
+          key_code: "keypad_enter",
+          modifiers: {
+            mandatory: [],
+            optional: ["any"],
+          },
+        },
+        to: [
+          {
+            key_code: "return_or_enter",
+            modifiers: [],
+          },
+        ],
+        type: "basic",
+        conditions: [
+          {
+            type: "frontmost_application_if",
+            bundle_identifiers: ["^net\\.ankiweb\\.dtop"],
+          },
+        ],
+      },
+    ],
+  },
 ];

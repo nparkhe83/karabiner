@@ -1,6 +1,6 @@
 import { KarabinerRules } from "../types";
 
-export const ankiBuryKeyRemap: [KarabinerRules] = [
+export const ankiKeysRemap: [KarabinerRules] = [
   {
     description: "Numpad_5 to `=` i.e bury card when Anki is open",
     manipulators: [

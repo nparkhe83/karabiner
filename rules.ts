@@ -1,7 +1,7 @@
 import fs from "fs";
 import sortJSON from "sort-json";
 import { devices } from "./device-configuration";
-import { ankiBuryKeyRemap } from "./rules/anki_bury_key_remap";
+import { ankiBuryKeyRemap } from "./rules/anki_remap_keys";
 import { app_rules } from "./rules/app_rules";
 import { appln_to_Option } from "./rules/appln_rightOption";
 import { fn_function_keys } from "./rules/defaults/fn_key_mappings";

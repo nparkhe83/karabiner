@@ -1,8 +1,8 @@
 import { KarabinerRules } from "../types";
 
-export const ankiKeysRemap: [KarabinerRules] = [
+export const ankiKeysRemap: KarabinerRules[] = [
   {
-    description: "Numpad_5 to `=` i.e bury card when Anki is open",
+    description: "Keypad_5 to `=` i.e bury card when Anki is open",
     manipulators: [
       {
         from: {
@@ -29,7 +29,34 @@ export const ankiKeysRemap: [KarabinerRules] = [
     ],
   },
   {
-    description: "Numpad_5 to `=` i.e bury card when Anki is open",
+    description: "Fn + F4 to `=` i.e bury card when Anki is open",
+    manipulators: [
+      {
+        from: {
+          consumer_key_code: "ac_home",
+          modifiers: {
+            mandatory: [],
+            optional: ["any"],
+          },
+        },
+        to: [
+          {
+            key_code: "equal_sign",
+            modifiers: [],
+          },
+        ],
+        type: "basic",
+        conditions: [
+          {
+            type: "frontmost_application_if",
+            bundle_identifiers: ["^net\\.ankiweb\\.dtop"],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    description: "Enable KeyPad Enter in Anki",
     manipulators: [
       {
         from: {
@@ -56,3 +83,31 @@ export const ankiKeysRemap: [KarabinerRules] = [
     ],
   },
 ];
+
+const x: KarabinerRules = {
+  description: "Fn + F4 to `=` i.e bury card when Anki is open",
+  manipulators: [
+    {
+      from: {
+        consumer_key_code: "ac_home",
+        modifiers: {
+          mandatory: [],
+          optional: ["any"],
+        },
+      },
+      to: [
+        {
+          key_code: "equal_sign",
+          modifiers: [],
+        },
+      ],
+      type: "basic",
+      conditions: [
+        {
+          type: "frontmost_application_if",
+          bundle_identifiers: ["^net\\.ankiweb\\.dtop"],
+        },
+      ],
+    },
+  ],
+};

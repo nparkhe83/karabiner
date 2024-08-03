@@ -135,7 +135,7 @@
                         ]
                     },
                     {
-                        "description": "Numpad_5 to `=` i.e bury card when Anki is open",
+                        "description": "Keypad_5 to `=` i.e bury card when Anki is open",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -166,7 +166,38 @@
                         ]
                     },
                     {
-                        "description": "Numpad_5 to `=` i.e bury card when Anki is open",
+                        "description": "Fn + F4 to `=` i.e bury card when Anki is open",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^net\\.ankiweb\\.dtop"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "consumer_key_code": "ac_home",
+                                    "modifiers": {
+                                        "mandatory": [],
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "equal_sign",
+                                        "modifiers": []
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Enable KeyPad Enter in Anki",
                         "manipulators": [
                             {
                                 "conditions": [

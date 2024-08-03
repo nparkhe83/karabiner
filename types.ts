@@ -101,6 +101,7 @@ export interface SimultaneousOptions {
 
 export interface From {
   key_code?: KeyCode;
+  consumer_key_code?: ConsumerKeyCode;
   simultaneous?: SimultaneousFrom[];
   simultaneous_options?: SimultaneousOptions;
   modifiers?: Modifiers;
@@ -141,6 +142,11 @@ export interface MouseKey {
 export interface SoftwareFunction {
   iokit_power_management_sleep_system?: {};
 }
+
+export type ConsumerKeyCode =
+  | "ac_home"
+  | "scan_previous_track"
+  | "scan_next_track";
 
 export type KeyCode =
   | "caps_lock"

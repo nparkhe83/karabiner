@@ -56,7 +56,7 @@ const rules: KarabinerRules[] = [
       },
     ],
   },
-  // Use 5 in Number row and 5 in Keypad to bury card when Anki is open
+  // Remap Keypad_5 and F4 keys to bury card when Anki is open
   ...ankiKeysRemap,
   // Press Right Shift twice to get Caps Lock
   doubleShiftCaps,
